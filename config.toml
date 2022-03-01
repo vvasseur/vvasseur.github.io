@@ -1,0 +1,8 @@
+base_url = "https://vvasseur.github.io"
+title = "Valentin Vasseur"
+compile_sass = true
+highlight_code = false
+
+[extra]
+author = "Valentin Vasseur"
+email = "valentin.vasseur@gmail.com"

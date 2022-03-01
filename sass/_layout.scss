@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.site-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: 100vh;
+}
+
+.site-header {
+    .site-title {
+        display: block;
+        font-weight: 700;
+        font-size: 55px;
+        a {
+            color: $text-color;
+            text-decoration: none;
+        }
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .site-nav, .site-nav-responsive {
+        font-size: 1.2em;
+        font-weight: 500;
+        text-align: center;
+        a {
+            color: $text-color;
+            text-decoration: none;
+            padding: 2px 2px;
+        }
+        .subsection {
+            font-size: 0.8em;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .site-title {
+            img {
+                min-height: 120px;
+            }
+        }
+        .site-nav {
+            display: inline;
+            a {
+                &:hover, &.active {
+                    border-bottom: 2px solid #666;
+                }
+                + a {
+                    margin-left: 0.5rem;
+                }
+            }
+            a.icon {
+                display: none;
+            }
+            .subsection {
+                a {
+                    margin-left: 0.5rem;
+                }
+                display: inline;
+            }
+        }
+    }
+
+    @media not screen and (min-width: 700px) {
+        .site-title {
+            font-size: 22px;
+            img {
+                height: 50px;
+            }
+        }
+        .site-nav, .site-nav-responsive {
+            display: block;
+            position: relative;
+            a {
+                display: block;
+                float: none;
+                text-align: left;
+                &:hover:not(.icon) {
+                    text-decoration: underline;
+                }
+            }
+            a.icon {
+                float: right;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .subsection {
+                a {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+        .site-nav {
+            a:not(.active):not(.icon) {
+                display: none;
+            }
+        }
+
+    }
+}

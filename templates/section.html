@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+
+{% block content %}{{ section.content | safe }}{% for post in section.pages %}
+<h1><a href="{{ post.path | safe }}">{{ post.title }}</a></h1>{% endfor %}{% endblock content %}
