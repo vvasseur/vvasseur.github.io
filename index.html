@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='About me.'>
+<title>Valentin Vasseur - About</title>
+<link rel='stylesheet' href='/main.css'>
+<link rel='stylesheet' href='/katex/katex.min.css'>
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<div class='site-container'>
+<header class='site-header'>
+<div class='site-title'><a href='/'>Valentin Vasseur</a></div>
+<nav class='site-nav' id='nav-bar'>
+<a href='/' class='active'>About</a>
+<a href='/phd-defence/' class=''>PhD Defence</a>
+<a href='/teaching/' class=''>Teaching</a>
+<a href='/research/' class=''>Research</a>
+<div class='subsection'>
+<a href='/research/mdpc/' class=''>MDPC</a>
+<a href='/research/papers/' class=''>Papers</a>
+<a href='/research/code/' class=''>Source code</a>
+</div>
+<a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+</nav>
+</header>
+<main class='site-content'>
+<p>I am a cryptologist at Thales.</p>
+<p>I completed my PhD in the <em>équipe-projet</em> <a href="https://www.rocq.inria.fr/cosmiq">COSMIQ (previously SECRET)</a> at Inria Paris under the supervision of <a href="https://www.rocq.inria.fr/secret/Nicolas.Sendrier">Nicolas Sendrier</a>.</p>
+<h1 id="research-interests">Research interests</h1>
+<p>I am interested in Moderate Density Parity Check (MDPC) <a href="https://doi.org/10.1109/ISIT.2013.6620590">[doi]</a>
+ <a href="https://eprint.iacr.org/2012/409">[eprint]</a>
+ codes, more specifically I am interested in their decoders.
+This type of codes is defined similarly to Low Density Parity Check (LDPC) codes, the main difference is the number of ones in the rows of the parity check matrix: a small constant for LDPC but in \(\mathcal{O}(\sqrt{n})\) for MDPC (with \(n\) the length of the code).
+This difference in density allows for a McEliece-like public key cryptosystem whose secret key attacks and message attacks reduce to hard problems on codes.</p>
+<p>The <a href="https://csrc.nist.gov/Projects/Post-Quantum-Cryptography">NIST PQC</a> candidate <a href="https://bikesuite.org">BIKE</a> is based on the quasi-cyclic MDPC codes.</p>
+<h1 id="contact">Contact</h1>
+<p><a href="mailto:valentin.vasseur@gmail.com">Email</a></p>
+</main>
+</div>
+<script>
+function openDrawerMenu(){
+    let x = document.getElementById("nav-bar");
+    if (x.className === "site-nav"){
+        x.className += "-responsive";
+    } else {
+        x.className = "site-nav";
+    }
+}
+</script>
+</body>
+</html>

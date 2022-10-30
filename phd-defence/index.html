@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Information about my PhD Defence.'>
+<title>Valentin Vasseur - PhD Defence</title>
+<link rel='stylesheet' href='/main.css'>
+<link rel='stylesheet' href='/katex/katex.min.css'>
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<div class='site-container'>
+<header class='site-header'>
+<div class='site-title'><a href='/'>Valentin Vasseur</a></div>
+<nav class='site-nav' id='nav-bar'>
+<a href='/' class=''>About</a>
+<a href='/phd-defence/' class='active'>PhD Defence</a>
+<a href='/teaching/' class=''>Teaching</a>
+<a href='/research/' class=''>Research</a>
+<div class='subsection'>
+<a href='/research/mdpc/' class=''>MDPC</a>
+<a href='/research/papers/' class=''>Papers</a>
+<a href='/research/code/' class=''>Source code</a>
+</div>
+<a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+</nav>
+</header>
+<main class='site-content'>
+<h2 id="cryptographie-post-quantique-etude-du-decodage-des-codes-qc-mdpc">Cryptographie post-quantique : étude du décodage des codes QC-MDPC</h2>
+<h2 id="post-quantum-cryptography-study-on-the-decoding-of-qc-mdpc-codes">Post-quantum cryptography: study on the decoding of QC-MDPC codes</h2>
+<h3 id="29-03-2021-14h-utc-02-00">29/03/2021 - 14h (UTC+02:00)</h3>
+<p><a href="/papers/2021-03-29-thesis-Vasseur.pdf">[Dissertation]</a>
+ and
+<a href="/papers/2021-03-29-slides-Vasseur.pdf">[slides]</a>
+ are in English.</p>
+<p>The presentation will be given in French.</p>
+<h3 id="resume">Résumé</h3>
+<p>La cryptographie post-quantique vise à sécuriser les échanges contre un adversaire disposant d'un ordinateur quantique.
+L'une des approches envisagées pour permettre un chiffrement à clé publique post-quantique repose sur des problèmes difficiles en théorie des codes.
+Le mécanisme d'encapsulation de clé BIKE, soumis au processus de standardisation post-quantiques du NIST, utilise des codes QC-MDPC dont la quasi-cyclicité permet une représentation compacte de la clé.
+Cependant, leurs algorithmes de décodage ont une probabilité d'échec (DFR) non nulle, ce qui peut poser un problème de sécurité comme l'ont démontré Guo, Johansson et Stankovski.
+Ce travail se concentre donc sur l'implémentation et la sécurité de BIKE du point de vue du décodeur.
+Premièrement, nous concevons de nouveaux algorithmes qui réduisent drastiquement le DFR.
+Ensuite, nous développons des modèles probabilistes pour prédire le DFR dans des zones hors de portée des simulations.
+Enfin, nous en déduisons une méthode d'extrapolation du DFR et nous évaluons son adéquation avec des caractéristiques structurelles du code qui peuvent affecter le processus de décodage.</p>
+<h3 id="abstract">Abstract</h3>
+<p>Post-quantum cryptography aims at securing exchanges against an adversary with a quantum computer.
+One approach considered to achieve post-quantum public key encryption relies on hard problems in coding theory.
+The key encapsulation mechanism BIKE, submitted to the NIST post-quantum standardization process, uses QC-MDPC codes whose quasi-cyclicity allows for a compact key representation.
+However, their decoding algorithms have a non-zero probability of failure (DFR) and this can be a security concern as demonstrated by Guo, Johansson and Stankovski.
+This work therefore focuses on the implementation and security of BIKE from the decoder's perspective.
+This is done first by designing new algorithms that drastically reduce the DFR.
+Second, we develop probabilistic models to predict the DFR in areas out of reach by simulations.
+Finally, we derive a method for extrapolating the DFR and we evaluate its adequacy with structural characteristics of the code that can affect the decoding process.</p>
+<h3 id="jury">Jury</h3>
+<ul>
+<li>Nicolas Sendrier, Inria, Directeur
+</li>
+<li>Jérôme Lacan, ISAE-Supaero, Rapporteur
+</li>
+<li>Pierre Loidreau, Université de Rennes, Rapporteur
+</li>
+<li>Alain Couvreur, Inria, Examinateur
+</li>
+<li>Caroline Fontaine, ENS Paris-Saclay, Examinatrice
+</li>
+<li>Philippe Gaborit, Université de Limoges, Examinateur
+</li>
+<li>Sophie Laplante, Université de Paris, Examinatrice
+</li>
+<li>Jean-Pierre Tillich, Inria, Examinateur
+</li>
+</ul>
+</main>
+</div>
+<script>
+function openDrawerMenu(){
+    let x = document.getElementById("nav-bar");
+    if (x.className === "site-nav"){
+        x.className += "-responsive";
+    } else {
+        x.className = "site-nav";
+    }
+}
+</script>
+</body>
+</html>

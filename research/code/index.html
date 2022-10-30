@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Some sources.'>
+<title>Valentin Vasseur - Source code</title>
+<link rel='stylesheet' href='/main.css'>
+<link rel='stylesheet' href='/katex/katex.min.css'>
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<div class='site-container'>
+<header class='site-header'>
+<div class='site-title'><a href='/'>Valentin Vasseur</a></div>
+<nav class='site-nav' id='nav-bar'>
+<a href='/' class=''>About</a>
+<a href='/phd-defence/' class=''>PhD Defence</a>
+<a href='/teaching/' class=''>Teaching</a>
+<a href='/research/' class='active'>Research</a>
+<div class='subsection'>
+<a href='/research/mdpc/' class=''>MDPC</a>
+<a href='/research/papers/' class=''>Papers</a>
+<a href='/research/code/' class='active'>Source code</a>
+</div>
+<a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+</nav>
+</header>
+<main class='site-content'>
+<ul>
+<li><a href="https://github.com/vvasseur/backflip">An implementation of the Backflip QC-MDPC decoder</a></li>
+<li><a href="https://github.com/vvasseur/qcmdpc_decoder">An implementation of a few QC-MDPC decoding algorithms</a></li>
+<li><a href="https://github.com/vvasseur/isd">An implementation of Dumer's algorithm for Information Set Decoding</a>
+to solve some challenges on <a href="http://decodingchallenge.org/">the code-based challenges webpage</a></li>
+</ul>
+</main>
+</div>
+<script>
+function openDrawerMenu(){
+    let x = document.getElementById("nav-bar");
+    if (x.className === "site-nav"){
+        x.className += "-responsive";
+    } else {
+        x.className = "site-nav";
+    }
+}
+</script>
+</body>
+</html>
